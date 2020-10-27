@@ -3,11 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>CounterButton</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+
+    [type="button"] {
+      font-size: 14px;
+      line-height: 20px;
+      min-height: 30px;
+      padding: 5px 7px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Решение -->
+<div id="app" v-cloak>
+  <!-- считаю эту реализацию самой верной -->
+  <button type="button" @click="handleCountClick">{{ count }}</button>
+  <hr />
+  <!--Смущает, что так тоже работает) -->
+  <button type="button" @click="handleCountClick()">{{ count }}</button>
+  <hr />
+  <!-- так тоже можно, но просили через метод -->
+  <button type="button" @click="count++">{{ count }}</button>
+  <button type="button" @click="++count">{{ count }}</button>
+</div>
 
-<script type="module" src="script.js"></script>
+<script type="module" src="./script.js"></script>
 </body>
 </html>
