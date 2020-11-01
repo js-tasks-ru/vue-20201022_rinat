@@ -16,8 +16,8 @@
   "dependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
-    "@vue/cli-service": "^4.5.6",
     "@vue/cli-plugin-unit-jest": "^4.5.6",
+    "@vue/cli-service": "^4.5.6",
     "@vue/test-utils": "^1.1.0",
     "axios": "^0.20.0",
     "flush-promises": "^1.0.2",
